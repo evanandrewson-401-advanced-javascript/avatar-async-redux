@@ -14,8 +14,11 @@ const Characters = ({ items }) => {
 };
 
 Characters.propTypes = {
-  toDetailPage: PropTypes.func.isRequired,
-  items: PropTypes.array.isRequired
+  items: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    photoUrl: PropTypes.string.isRequired
+  })).isRequired
 };
 
 export default Characters;

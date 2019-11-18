@@ -12,7 +12,6 @@ const Character = ({ _id, name, photoUrl }) => {
 };
 
 Character.propTypes = {
-  toDetailPage: PropTypes.func.isRequired,
   _id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   photoUrl: PropTypes.string.isRequired
