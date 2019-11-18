@@ -1,13 +1,13 @@
 import React from 'react';
-import { } from 'react-redux';
+import { Link } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const Character = ({ _id, name, photoUrl }) => {
   return (
-    <>
+    <Link to={`/character/${_id}`}>
       <img src={photoUrl} />
       <h1>{name}</h1>
-    </>
+    </ Link>
   );
 };
 
