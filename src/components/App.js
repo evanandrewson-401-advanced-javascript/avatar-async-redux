@@ -1,9 +1,14 @@
 import React from 'react';
-import Characters from './characters/Characters';
+import CharacterContainer from './containers/CharacterContainer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => {
   return (
-    <Characters />
+    <Router>
+      <Switch>
+        <Route path="/" component={CharacterContainer} />
+      </Switch>
+    </Router>
   );
 };
 

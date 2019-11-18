@@ -6,7 +6,7 @@ const initialState = {
   characterLoading: false
 };
 
-export default function(state = initialState, action) {
+export default function reducer(state = initialState, action) {
   switch(action.type) {
     case UPDATE_CHARACTERS_LOADING:
     case UPDATE_CHARACTERS_DONE:
