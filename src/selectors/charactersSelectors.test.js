@@ -1,4 +1,4 @@
-import { getCharacters, getCharacterLoading } from "./charactersSelectors";
+import { getCharacters, getCharacterLoading } from './charactersSelectors';
 
 describe('character selectors', () => {
   it('can get characters', () => {

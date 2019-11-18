@@ -1,4 +1,4 @@
-import fetchCharacters from '../services/fetchCharacters';
+import { fetchCharacters } from '../services/fetchCharacters';
 
 export const UPDATE_CHARACTERS = 'UPDATE_CHARACTERS';
 export const UPDATE_CHARACTERS_LOADING = 'UPDATE_CHARACTERS_LOADING';
@@ -9,15 +9,15 @@ export const updateCharacters = () => dispatch => {
     type: UPDATE_CHARACTERS_LOADING
   });
 
-  fetchCharacters()
+  return fetchCharacters()
     .then(characters => {
       dispatch({
         type: UPDATE_CHARACTERS,
         payload: characters
       });
+      dispatch({
+        type: UPDATE_CHARACTERS_DONE
+      });
     });
 
-  dispatch({
-    type: UPDATE_CHARACTERS_DONE
-  });
 };
